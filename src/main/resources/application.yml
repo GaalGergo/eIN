@@ -3,3 +3,8 @@ spring:
         hibernate:
             ddl-auto: create-drop
         show-sql: true
+
+    mvc:
+        view:
+            prefix: /WEB-INF/views/
+            suffix: .jsp
