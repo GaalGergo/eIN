@@ -1,4 +1,4 @@
-package com.github.gaalgergo.ein.app.tanulo;
+package com.github.gaalgergo.ein.app.entity;
 
 import com.github.gaalgergo.ein.app.kozos.AlapEntity;
 import lombok.Data;
