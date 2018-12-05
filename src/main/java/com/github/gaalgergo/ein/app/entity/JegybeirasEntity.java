@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 
@@ -13,9 +14,17 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "jegybeirasok")
 public class JegybeirasEntity extends AlapEntity {
+
+    @OneToOne
     private OktatoEntity oktato;
+
+    @OneToOne
     private TanuloEntity tanulo;
+
+    @OneToOne
     private TantargyEntity tantargy;
+
     private Integer erdemjegy;
+
     private LocalDateTime idopont;
 }

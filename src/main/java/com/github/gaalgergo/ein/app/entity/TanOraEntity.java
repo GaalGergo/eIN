@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 
@@ -13,9 +15,16 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "tanorak")
 public class TanOraEntity extends AlapEntity {
+
+    @OneToOne
     private OktatoEntity oktato;
+
+    @OneToOne
     private TantargyEntity tantargy;
+
     private String osztaly;
+
     private String tanterem;
+
     private LocalDateTime idopont;
 }
