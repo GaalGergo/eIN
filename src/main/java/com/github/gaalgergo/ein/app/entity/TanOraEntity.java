@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class TanOraEntity extends AlapEntity {
 
     @OneToOne
-    private OktatoEntity oktato;
+    private FelhasznaloEntity oktato;
 
     @OneToOne
     private TantargyEntity tantargy;

@@ -16,10 +16,10 @@ import java.time.LocalDateTime;
 public class JegybeirasEntity extends AlapEntity {
 
     @OneToOne
-    private OktatoEntity oktato;
+    private FelhasznaloEntity oktato;
 
     @OneToOne
-    private TanuloEntity tanulo;
+    private FelhasznaloEntity tanulo;
 
     @OneToOne
     private TantargyEntity tantargy;

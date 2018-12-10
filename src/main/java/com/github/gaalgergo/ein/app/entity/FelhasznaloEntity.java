@@ -5,15 +5,21 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
-import java.time.LocalDate;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "tanulok")
-public class TanuloEntity extends AlapEntity {
+@Table(name = "felhasznalok")
+public class FelhasznaloEntity extends AlapEntity {
     private String nev;
-    private String email;
-    private LocalDate szuletesiDatum;
+
+    private String felhasznaloNev;
+
+    private String jelszo;
+
+    @Enumerated(EnumType.STRING)
+    private FelhasznaloTipus tipus;
 }
