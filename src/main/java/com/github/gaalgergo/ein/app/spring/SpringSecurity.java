@@ -30,6 +30,7 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginProcessingUrl("/login")
                 .loginPage("/")
+                .successHandler(new SuccessHandler())
             .and()
                 .csrf().disable();
     }
