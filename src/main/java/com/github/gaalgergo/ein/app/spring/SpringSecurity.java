@@ -24,7 +24,8 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
                 .antMatchers("/css/**", "/").permitAll()
-                .antMatchers("/diak", "/diak/**").hasRole("TANULO")
+                .antMatchers("/tanulo", "/tanulo/**").hasRole("TANULO")
+                .antMatchers("/oktato", "/oktato/**").hasRole("OKTATO")
             .and()
                 .formLogin()
                 .loginProcessingUrl("/login")

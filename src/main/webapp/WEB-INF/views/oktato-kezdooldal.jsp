@@ -9,6 +9,6 @@
             <span>Az elektronikus iskolanapló</span>
         </header>
 
-        <h3>DIÁK KEZDŐOLDAL</h3>
+        <h3>Tanár KEZDŐOLDAL</h3>
     </body>
 </html>
