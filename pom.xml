@@ -20,6 +20,7 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dir.codequality>${project.basedir}/code-quality</dir.codequality>
+        <start-class>com.github.gaalgergo.ein.app.spring.EinApp</start-class>
 
         <version.checkstyle>2.17</version.checkstyle>
         <version.findbugs>3.0.4</version.findbugs>
@@ -83,6 +84,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <layout>WAR</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <plugin>
