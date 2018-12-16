@@ -16,7 +16,7 @@ public class OldalController {
         return "oktato-kezdooldal";
     }
 
-    @GetMapping(path = "/diak")
+    @GetMapping(path = "/tanulo")
     public String diakKezdo() {
         return "diak-kezdooldal";
     }
