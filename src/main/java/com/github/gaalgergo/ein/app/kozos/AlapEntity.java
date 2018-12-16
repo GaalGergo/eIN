@@ -13,5 +13,5 @@ public class AlapEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long azon;
+    private Long azon;
 }

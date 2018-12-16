@@ -20,6 +20,7 @@
                 <input id="password" type="password" name="password">
             </div>
             <button type="submit">BEJELENTKEZÉS</button>
+            <a href="/reg">Regisztráció</a>
         </form>
     </body>
 </html>
