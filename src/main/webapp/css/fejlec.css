@@ -35,3 +35,18 @@ header {
     text-decoration: none;
     text-transform: uppercase;
 }
+
+.menu {
+    padding: 8px;
+    font-size: 0.8em;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.menu:hover {
+    background-color: deepskyblue;
+}

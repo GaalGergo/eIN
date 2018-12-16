@@ -7,6 +7,11 @@
         <p>E-IN</p>
         <span>Elektronikus iskolanapló</span>
     </div>
+    <div>
+        <a class="menu" href="/naptar">Naptár</a>
+        <a class="menu" href="/jegybeiras">Jegybeírás</a>
+        <a class="menu" href="/orafelvetel">Órafelvétel</a>
+    </div>
     <sec:authorize access="isAuthenticated()">
         <a id="kijelentkezes" href="/logout">Kijelentkezés</a>
     </sec:authorize>
