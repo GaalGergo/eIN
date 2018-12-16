@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+#fejlec {
+    display: flex;
+    flex-direction: column;
+}
+
+#fejlec p {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+#fejlec span {
+    font-weight: 300;
+}

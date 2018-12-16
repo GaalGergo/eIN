@@ -2,8 +2,9 @@
 
 <!DOCTYPE html>
 <html>
-    <jsp:include page="fejlec.jsp"/>
+    <jsp:include page="head.jsp"/>
     <body>
+        <link rel="stylesheet" href="css/kezdooldal.css">
         <header id="header">
             <p>E-IN</p>
             <span>Az elektronikus iskolanapló</span>

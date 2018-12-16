@@ -2,13 +2,9 @@
 
 <!DOCTYPE html>
 <html>
-    <jsp:include page="fejlec.jsp"/>
+    <jsp:include page="head.jsp"/>
     <body>
-        <header id="header">
-            <p>E-IN</p>
-            <span>Az elektronikus iskolanapló</span>
-        </header>
-
+        <jsp:include page="fejlec.jsp"/>
         <h3>Tanár KEZDŐOLDAL</h3>
     </body>
 </html>

@@ -12,7 +12,10 @@ import java.io.IOException;
 public class SuccessHandler implements AuthenticationSuccessHandler {
 
     @Override
-    public void onAuthenticationSuccess(final HttpServletRequest req, final HttpServletResponse res, Authentication authentication) throws IOException, ServletException {
+    public void onAuthenticationSuccess(
+            final HttpServletRequest req,
+            final HttpServletResponse res,
+            final Authentication authentication) throws IOException, ServletException {
 
         for (GrantedAuthority authority : authentication.getAuthorities()) {
             if (authority.getAuthority().equals("ROLE_OKTATO")) {
