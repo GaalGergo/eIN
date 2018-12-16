@@ -22,7 +22,7 @@ public class SuccessHandler implements AuthenticationSuccessHandler {
                 res.sendRedirect("/oktato");
                 return;
             } else {
-                res.sendRedirect("/diak");
+                res.sendRedirect("/tanulo");
                 return;
             }
         }

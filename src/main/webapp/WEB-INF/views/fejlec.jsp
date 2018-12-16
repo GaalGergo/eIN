@@ -8,6 +8,6 @@
         <span>Elektronikus iskolanapló</span>
     </div>
     <sec:authorize access="isAuthenticated()">
-        <a href="/logout">Kijelentkezés</a>
+        <a id="kijelentkezes" href="/logout">Kijelentkezés</a>
     </sec:authorize>
 </header>
