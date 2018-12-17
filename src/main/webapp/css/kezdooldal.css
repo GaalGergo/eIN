@@ -42,19 +42,3 @@ body {
 
     border-top: 5px solid lightblue;
 }
-
-.form-elem {
-    display: flex;
-    margin: 5px;
-    flex-direction: column;
-}
-
-.form-elem label {
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-input {
-    padding: 3px;
-    font-size: 0.8em;
-}

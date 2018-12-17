@@ -14,8 +14,34 @@ html {
 body {
     position: relative;
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
 
     background-color: #ECEFF1;
+}
+
+main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    top: 130px;
+}
+
+.form-elem {
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+}
+
+.form-elem label {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+input {
+    padding: 3px;
+    font-size: 0.8em;
 }

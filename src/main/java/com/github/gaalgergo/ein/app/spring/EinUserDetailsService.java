@@ -21,13 +21,20 @@ public class EinUserDetailsService implements UserDetailsService {
     private FelhasznaloRepository repository;
 
     @Override
-    public UserDetails loadUserByUsername(final String username) throws UsernameNotFoundException {
+    public SpringEinFelhasznalo loadUserByUsername(final String username) throws UsernameNotFoundException {
         FelhasznaloEntity felhasznaloEntity = repository.findByFelhasznaloNev(username);
         if (felhasznaloEntity == null) {
             throw new UsernameNotFoundException("a felhasznalo nem található!");
         }
+
+
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
         grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_" + felhasznaloEntity.getTipus().name()));
-        return new User(felhasznaloEntity.getFelhasznaloNev(), felhasznaloEntity.getJelszo(), grantedAuthorities);
+        SpringEinFelhasznalo felhasznalo = new SpringEinFelhasznalo(
+                felhasznaloEntity.getFelhasznaloNev(),
+                felhasznaloEntity.getJelszo(),
+                grantedAuthorities);
+        felhasznalo.setFelhasznaloEntity(felhasznaloEntity);
+        return felhasznalo;
     }
 }
