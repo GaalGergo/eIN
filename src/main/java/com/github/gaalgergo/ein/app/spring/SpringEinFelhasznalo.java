@@ -11,7 +11,9 @@ import java.util.Collection;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class SpringEinFelhasznalo extends User {
-    private FelhasznaloEntity felhasznaloEntity;
+    private static final long serialVersionUID = 1L;
+
+    private transient FelhasznaloEntity felhasznaloEntity;
 
     public SpringEinFelhasznalo(
             final String username,

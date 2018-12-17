@@ -3,7 +3,6 @@ package com.github.gaalgergo.ein.app.controller;
 import com.github.gaalgergo.ein.app.entity.FelhasznaloEntity;
 import com.github.gaalgergo.ein.app.entity.FelhasznaloTipus;
 import com.github.gaalgergo.ein.app.entity.JegybeirasEntity;
-import com.github.gaalgergo.ein.app.entity.TantargyEntity;
 import com.github.gaalgergo.ein.app.repository.FelhasznaloRepository;
 import com.github.gaalgergo.ein.app.repository.JegybeirasRepository;
 import com.github.gaalgergo.ein.app.repository.TantargyRepository;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.security.Principal;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
@@ -74,7 +72,7 @@ public class OldalController {
 
     @GetMapping(path = "/oktato/jegybeiras")
     public ModelAndView jegybeiras() {
-        SpringEinFelhasznalo felhasznalo = (SpringEinFelhasznalo)SecurityContextHolder
+        SpringEinFelhasznalo felhasznalo = (SpringEinFelhasznalo) SecurityContextHolder
             .getContext()
             .getAuthentication()
             .getPrincipal();
