@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-    <jsp:include page="head.jsp"/>
+    <jsp:include page="alap/head.jsp"/>
     <body>
         <link rel="stylesheet" href="css/kezdooldal.css">
         <header id="header">
@@ -20,7 +20,7 @@
                 <input id="password" type="password" name="password">
             </div>
             <button type="submit">BEJELENTKEZÉS</button>
-            <a href="/reg">Regisztráció</a>
+            <a href="/regisztracio">Regisztráció</a>
         </form>
     </body>
 </html>

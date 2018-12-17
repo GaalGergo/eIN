@@ -3,9 +3,9 @@
 
 <!DOCTYPE html>
 <html>
-    <jsp:include page="head.jsp"/>
+    <jsp:include page="../alap/head.jsp"/>
     <body>
-        <jsp:include page="fejlec.jsp"/>
+        <jsp:include page="../alap/fejlec.jsp"/>
         <main>
             <form:form id="jegybeiras" method="POST" action="/oktato/jegybeiras" modelAttribute="jegy">
                 <div class="form-elem">

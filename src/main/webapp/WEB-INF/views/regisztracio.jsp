@@ -3,15 +3,15 @@
 
 <!DOCTYPE html>
 <html>
-    <jsp:include page="head.jsp"/>
+    <jsp:include page="alap/head.jsp"/>
     <body>
-        <link rel="stylesheet" href="css/kezdooldal.css">
+        <link rel="stylesheet" href="/css/kezdooldal.css">
         <header id="header">
             <p>E-IN</p>
             <span>Az elektronikus iskolanapló</span>
         </header>
 
-        <form:form id="loginform" method="POST" action="/reg" modelAttribute="felhasznalo">
+        <form:form id="loginform" method="POST" action="/regisztracio" modelAttribute="felhasznalo">
             <div class="form-elem">
                 <form:label path="nev">Név</form:label>
                 <form:input path="nev" type="text" required="required"/>

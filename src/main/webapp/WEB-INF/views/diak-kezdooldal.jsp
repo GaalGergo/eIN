@@ -2,9 +2,9 @@
 
 <!DOCTYPE html>
 <html>
-    <jsp:include page="head.jsp"/>
+    <jsp:include page="alap/head.jsp"/>
     <body>
-        <jsp:include page="fejlec.jsp"/>
+        <jsp:include page="alap/fejlec.jsp"/>
         <h3>DIÁK KEZDŐOLDAL</h3>
     </body>
 </html>
