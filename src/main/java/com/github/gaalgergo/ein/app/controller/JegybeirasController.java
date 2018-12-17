@@ -30,6 +30,13 @@ public class JegybeirasController {
     private JegybeirasRepository jegybeirasRepository;
 
     @GetMapping(path = "")
+    public ModelAndView jegyLista() {
+        ModelAndView modelAndView = new ModelAndView("jegybeiras/jegy-lista");
+        modelAndView.addObject("jegyek", jegybeirasRepository.findAll());
+        return modelAndView;
+    }
+
+    @GetMapping(path = "/uj")
     public ModelAndView jegybeiras() {
         SpringEinFelhasznalo felhasznalo = (SpringEinFelhasznalo) SecurityContextHolder
                 .getContext()
@@ -42,7 +49,7 @@ public class JegybeirasController {
         JegybeirasForm jegybeirasForm = new JegybeirasForm();
         jegybeirasForm.setJegybeirasEntity(jegybeirasEntity);
 
-        ModelAndView modelAndView = new ModelAndView("jegybeiras/jegybeiras");
+        ModelAndView modelAndView = new ModelAndView("jegybeiras/jegybeiras-uj");
         modelAndView.addObject("tantargyak", tantargyRepository.findAll());
         modelAndView.addObject("tanulok", felhasznaloRepository.findByTipus(FelhasznaloTipus.TANULO));
         modelAndView.addObject("jegy", jegybeirasForm);
@@ -50,7 +57,7 @@ public class JegybeirasController {
         return modelAndView;
     }
 
-    @PostMapping(path = "")
+    @PostMapping(path = "/uj")
     public String jegybeirasPost(final JegybeirasForm jegybeirasForm) {
         JegybeirasEntity entity = jegybeirasForm.getJegybeirasEntity();
 
@@ -59,6 +66,6 @@ public class JegybeirasController {
         entity.setOktato(felhasznaloRepository.getOne(jegybeirasForm.getTantargyId()));
         jegybeirasRepository.save(entity);
 
-        return "oktato-kezdooldal";
+        return "jegybeiras/jegy-lista";
     }
 }

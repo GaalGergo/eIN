@@ -16,3 +16,6 @@ VALUES (102, 'Angol Nyelv');
 
 INSERT INTO tantargyak (azon, nev)
 VALUES (103, 'Testnevelés');
+
+INSERT INTO jegybeirasok (azon, oktato_azon, tanulo_azon, tantargy_azon, erdemjegy, idopont)
+VALUES (100, 101, 100, 101, 4, '2018-12-18T13:33:45');
