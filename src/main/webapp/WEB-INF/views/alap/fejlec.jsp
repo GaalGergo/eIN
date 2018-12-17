@@ -8,11 +8,11 @@
         <span>Elektronikus iskolanapló</span>
     </div>
     <div>
-        <a class="menu" href="/naptar">Naptár</a>
-        <a class="menu" href="/oktato/jegybeiras">Jegybeírás</a>
-        <a class="menu" href="/oktato/orafelvetel">Órafelvétel</a>
+        <a class="gomb" href="/naptar">Naptár</a>
+        <a class="gomb" href="/oktato/jegybeiras">Jegybeírás</a>
+        <a class="gomb" href="/oktato/orafelvetel">Órafelvétel</a>
     </div>
     <sec:authorize access="isAuthenticated()">
-        <a id="kijelentkezes" href="/logout">Kijelentkezés</a>
+        <a class="gomb" href="/logout">Kijelentkezés</a>
     </sec:authorize>
 </header>

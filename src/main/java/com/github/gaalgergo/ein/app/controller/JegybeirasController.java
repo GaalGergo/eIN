@@ -36,20 +36,26 @@ public class JegybeirasController {
         return modelAndView;
     }
 
-    @GetMapping(path = "/uj")
-    public ModelAndView jegybeiras() {
+    @GetMapping(path = "/szerkeszt")
+    public ModelAndView jegybeiras(final Long azon) {
         SpringEinFelhasznalo felhasznalo = (SpringEinFelhasznalo) SecurityContextHolder
                 .getContext()
                 .getAuthentication()
                 .getPrincipal();
 
+
         JegybeirasEntity jegybeirasEntity = new JegybeirasEntity();
-        jegybeirasEntity.setOktato(felhasznalo.getFelhasznaloEntity());
+        if (azon != null) {
+            jegybeirasEntity = jegybeirasRepository.getOne(azon);
+        } else {
+            jegybeirasEntity.setOktato(felhasznalo.getFelhasznaloEntity());
+            jegybeirasEntity.setErdemjegy(1);
+        }
 
         JegybeirasForm jegybeirasForm = new JegybeirasForm();
         jegybeirasForm.setJegybeirasEntity(jegybeirasEntity);
 
-        ModelAndView modelAndView = new ModelAndView("jegybeiras/jegybeiras-uj");
+        ModelAndView modelAndView = new ModelAndView("jegybeiras/jegybeiras-szerkeszt");
         modelAndView.addObject("tantargyak", tantargyRepository.findAll());
         modelAndView.addObject("tanulok", felhasznaloRepository.findByTipus(FelhasznaloTipus.TANULO));
         modelAndView.addObject("jegy", jegybeirasForm);
@@ -57,15 +63,28 @@ public class JegybeirasController {
         return modelAndView;
     }
 
-    @PostMapping(path = "/uj")
+    @PostMapping(path = "/szerkeszt")
     public String jegybeirasPost(final JegybeirasForm jegybeirasForm) {
         JegybeirasEntity entity = jegybeirasForm.getJegybeirasEntity();
 
+        SpringEinFelhasznalo felhasznalo = (SpringEinFelhasznalo) SecurityContextHolder
+                .getContext()
+                .getAuthentication()
+                .getPrincipal();
+
         entity.setIdopont(LocalDateTime.now());
-        entity.setTanulo(felhasznaloRepository.getOne(jegybeirasForm.getTanuloId()));
-        entity.setOktato(felhasznaloRepository.getOne(jegybeirasForm.getTantargyId()));
+        entity.setTanulo(felhasznaloRepository.getOne(entity.getTanulo().getAzon()));
+        entity.setTantargy(tantargyRepository.getOne(entity.getTantargy().getAzon()));
+        entity.setOktato(felhasznalo.getFelhasznaloEntity());
+        System.out.println(entity);
         jegybeirasRepository.save(entity);
 
-        return "jegybeiras/jegy-lista";
+        return "redirect:/oktato/jegybeiras";
+    }
+
+    @PostMapping(path = "/torol")
+    public String torol(final Long azon) {
+        jegybeirasRepository.deleteById(azon);
+        return "redirect:/oktato/jegybeiras";
     }
 }

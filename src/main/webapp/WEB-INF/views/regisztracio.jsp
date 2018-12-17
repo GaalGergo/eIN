@@ -28,7 +28,7 @@
                 <form:label path="tipus">Oktató / Tanuló</form:label>
                 <form:select path="tipus" items="${tipusok}"/>
             </div>
-            <button type="submit">REGISZTRÁCIÓ</button>
+            <button type="submit" class="gomb">REGISZTRÁCIÓ</button>
         </form:form>
     </body>
 </html>

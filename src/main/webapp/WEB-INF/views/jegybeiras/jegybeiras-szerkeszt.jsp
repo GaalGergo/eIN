@@ -7,25 +7,31 @@
     <body>
         <jsp:include page="../alap/fejlec.jsp"/>
         <main>
-            <form:form id="jegybeiras" method="POST" action="/oktato/jegybeiras/uj" modelAttribute="jegy">
+            <form:form id="jegybeiras" method="POST" action="/oktato/jegybeiras/szerkeszt" modelAttribute="jegy">
                 <div class="form-elem">
                     <form:label path="tanuloId">Tanulo</form:label>
-                    <form:select path="tanuloId" items="${tanulok}" itemValue="azon" itemLabel="nev"/>
+                    <form:select path="jegybeirasEntity.tanulo.azon"
+                                 items="${tanulok}"
+                                 itemValue="azon"
+                                 itemLabel="nev"/>
                 </div>
                 <div class="form-elem">
                     <form:label path="tantargyId">Tantárgy</form:label>
-                    <form:select path="tantargyId" items="${tantargyak}" itemValue="azon" itemLabel="nev"/>
+                    <form:select path="jegybeirasEntity.tantargy.azon"
+                                 items="${tantargyak}"
+                                 itemValue="azon"
+                                 itemLabel="nev"/>
                 </div>
                 <div class="form-elem">
                     <form:label path="jegybeirasEntity.erdemjegy">Érdemjegy</form:label>
                     <form:input path="jegybeirasEntity.erdemjegy"
                                 type="number"
-                                value="1"
                                 min="1"
                                 max="5"
                                 required="required"/>
                 </div>
-                <button type="submit">MENTÉS</button>
+                <form:input type="hidden" path="jegybeirasEntity.azon"/>
+                <button type="submit" class="gomb">MENTÉS</button>
             </form:form>
         </main>
     </body>

@@ -19,7 +19,7 @@
                 <label for="password">Jelszó</label>
                 <input id="password" type="password" name="password">
             </div>
-            <button type="submit">BEJELENTKEZÉS</button>
+            <button type="submit" class="gomb">BEJELENTKEZÉS</button>
             <a href="/regisztracio">Regisztráció</a>
         </form>
     </body>
