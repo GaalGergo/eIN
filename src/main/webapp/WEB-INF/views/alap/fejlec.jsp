@@ -4,8 +4,10 @@
 <link rel="stylesheet" href="/css/fejlec.css">
 <header>
     <div id="fejlec">
-        <p>E-IN</p>
-        <span>Elektronikus iskolanapló</span>
+        <a href="/oktato">
+            <p>E-IN</p>
+            <span>Elektronikus iskolanapló</span>
+        </a>
     </div>
     <div>
         <a class="gomb" href="/naptar">Naptár</a>
