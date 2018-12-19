@@ -5,6 +5,11 @@
     <jsp:include page="alap/head.jsp"/>
     <body>
         <jsp:include page="alap/fejlec.jsp"/>
-        <h3>Tanár KEZDŐOLDAL</h3>
+        <main>
+            <a class="panel" href="/oktato/jegybeiras/">
+                <strong>Beírt jegyek száma</strong>
+                <span>${jegybeirasok}</span>
+            </a>
+        </main>
     </body>
 </html>

@@ -105,3 +105,27 @@ tr {
 tbody tr:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+strong {
+    text-transform: uppercase;
+}
+
+.panel {
+    position: relative;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    background-color: white;
+}
