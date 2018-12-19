@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface JegybeirasRepository extends JpaRepository<JegybeirasEntity, Long> {
     List<JegybeirasEntity> findByOktato(FelhasznaloEntity oktato);
+    List<JegybeirasEntity> findByTanulo(FelhasznaloEntity tanulo);
 }

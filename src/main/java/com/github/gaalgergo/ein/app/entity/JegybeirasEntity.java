@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
@@ -17,10 +18,10 @@ import java.time.LocalDateTime;
 @Table(name = "jegybeirasok")
 public class JegybeirasEntity extends AlapEntity {
 
-    @OneToOne
+    @ManyToOne
     private FelhasznaloEntity oktato;
 
-    @OneToOne
+    @ManyToOne
     private FelhasznaloEntity tanulo;
 
     @OneToOne

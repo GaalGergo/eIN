@@ -44,9 +44,4 @@ public class OldalController {
 
         return modelAndView;
     }
-
-    @GetMapping(path = "/tanulo")
-    public String diakKezdo() {
-        return "diak-kezdooldal";
-    }
 }
