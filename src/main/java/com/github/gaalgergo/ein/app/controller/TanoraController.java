@@ -1,7 +1,5 @@
 package com.github.gaalgergo.ein.app.controller;
 
-import com.github.gaalgergo.ein.app.entity.FelhasznaloTipus;
-import com.github.gaalgergo.ein.app.entity.JegybeirasEntity;
 import com.github.gaalgergo.ein.app.entity.TanOraEntity;
 import com.github.gaalgergo.ein.app.repository.TanoraRepository;
 import com.github.gaalgergo.ein.app.repository.TantargyRepository;
@@ -13,8 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.time.LocalDateTime;
 
 @Controller
 @RequestMapping(path = "/oktato/tanorak")
