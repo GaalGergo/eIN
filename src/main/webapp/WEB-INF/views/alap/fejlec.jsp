@@ -10,9 +10,8 @@
         </a>
     </div>
     <div>
-        <a class="gomb" href="/naptar">Naptár</a>
         <a class="gomb" href="/oktato/jegybeiras">Jegybeírás</a>
-        <a class="gomb" href="/oktato/orafelvetel">Órafelvétel</a>
+        <a class="gomb" href="/oktato/tanorak">Tanórák</a>
     </div>
     <sec:authorize access="isAuthenticated()">
         <a class="gomb" href="/logout">Kijelentkezés</a>
