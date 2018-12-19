@@ -4,7 +4,7 @@
 #### Használt technológiák
 * JPA (Hibernate)
 * H2 DB (memóriában)
-* Spring Boot 2
+* Spring Boot 2 (Spring MVC, Spring Data JPA)
 * JSP
 * CSS, HTML
 
