@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -9,10 +10,8 @@
             <jsp:param name="felhasznaloTipus" value="'TANULO'"></jsp:param>
         </jsp:include>
         <main>
-            <link rel="stylesheet" href="/css/jegy-lista.css">
-
             <h4>Jegyek</h4>
-            <table id="jegy-lista">
+            <table id="diak-jegy-lista">
                 <thead>
                     <tr class="lista-elem">
                         <th>Időpont</th>
@@ -32,7 +31,26 @@
                 </c:forEach>
                 </tbody>
             </table>
-            <p>Átlag: <c:out value="${átlag}"></c:out></p>
+
+            <h4>Átlagok</h4>
+            <table id="atlagok">
+                <thead>
+                    <tr class="lista-elem">
+                        <th>Tantárgy</th>
+                        <th>Átlag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${átlagok}" var="átlag">
+                    <tr class="lista-elem">
+                        <td>${átlag.key}</td>
+                        <td class="${átlag.value < 2.0 ? 'piros-betu': ''}">
+                            <fmt:formatNumber type="number" maxFractionDigits="2" value="${átlag.value}" />
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
         </main>
     </body>
 </html>

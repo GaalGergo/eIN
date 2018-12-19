@@ -25,10 +25,12 @@ body {
 main {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 30px;
     top: 130px;
+    width: 70%;
 }
 
 .form-elem {
@@ -78,8 +80,12 @@ li {
     background-color: #f44336;
 }
 
+.piros-betu {
+    color: #ef5350;
+}
 
 table {
+    width: 100%;
     position: relative;
     border-spacing: 0;
     border-collapse: collapse;
@@ -90,7 +96,6 @@ tbody {
 }
 
 th, td {
-    width: 20%;
     text-align: center;
 }
 
@@ -129,4 +134,34 @@ strong {
     flex-direction: column;
     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
     background-color: white;
+}
+
+#diak-jegy-lista {
+    width: 100%;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    background-color: white;
+}
+
+#diak-jegy-lista th, td {
+    width: 25%;
+}
+
+#atlagok {
+    width: 100%;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    background-color: white;
+}
+
+#atlagok th, td {
+    width: 50%;
+}
+
+.lista-elem {
+    position: relative;
+    display: flex;
+}
+
+h4 {
+    margin-bottom: 0px;
+    margin-top: 8px;
 }

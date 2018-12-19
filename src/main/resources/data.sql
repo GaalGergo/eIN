@@ -51,3 +51,9 @@ VALUES (503, 201, 100, 300, 4, '2018-11-18T14:33:45');
 
 INSERT INTO jegybeirasok (azon, oktato_azon, tanulo_azon, tantargy_azon, erdemjegy, idopont)
 VALUES (504, 201, 101, 301, 3, '2018-12-20T14:33:45');
+
+INSERT INTO jegybeirasok (azon, oktato_azon, tanulo_azon, tantargy_azon, erdemjegy, idopont)
+VALUES (505, 200, 101, 303, 2, '2018-11-18T14:33:45');
+
+INSERT INTO jegybeirasok (azon, oktato_azon, tanulo_azon, tantargy_azon, erdemjegy, idopont)
+VALUES (506, 201, 101, 303, 1, '2018-12-20T14:33:45');
