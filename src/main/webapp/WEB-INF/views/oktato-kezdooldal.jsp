@@ -4,7 +4,9 @@
 <html>
     <jsp:include page="alap/head.jsp"/>
     <body>
-        <jsp:include page="alap/fejlec.jsp"/>
+        <jsp:include page="alap/fejlec.jsp">
+            <jsp:param name="felhasznaloTipus" value="OKTATO"></jsp:param>
+        </jsp:include>
         <main>
             <a class="panel" href="/oktato/jegybeiras/">
                 <strong>Beírt jegyek száma</strong>

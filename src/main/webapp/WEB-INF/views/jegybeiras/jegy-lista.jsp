@@ -6,7 +6,9 @@
 <html>
     <jsp:include page="../alap/head.jsp"/>
     <body>
-        <jsp:include page="../alap/fejlec.jsp"/>
+        <jsp:include page="../alap/fejlec.jsp">
+            <jsp:param name="felhasznaloTipus" value="OKTATO"></jsp:param>
+        </jsp:include>
         <link rel="stylesheet" href="/css/jegy-lista.css">
 
         <main>

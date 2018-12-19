@@ -5,7 +5,9 @@
 <html>
     <jsp:include page="../alap/head.jsp"/>
     <body>
-        <jsp:include page="../alap/fejlec.jsp"/>
+        <jsp:include page="../alap/fejlec.jsp">
+            <jsp:param name="felhasznaloTipus" value="OKTATO"></jsp:param>
+        </jsp:include>
         <main>
             <form:form id="jegybeiras" method="POST" action="/oktato/jegybeiras/szerkeszt" modelAttribute="jegy">
                 <div class="form-elem">
