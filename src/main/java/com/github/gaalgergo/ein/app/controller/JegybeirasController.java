@@ -31,8 +31,13 @@ public class JegybeirasController {
 
     @GetMapping(path = "")
     public ModelAndView jegyLista() {
+        SpringEinFelhasznalo felhasznalo = (SpringEinFelhasznalo) SecurityContextHolder
+                .getContext()
+                .getAuthentication()
+                .getPrincipal();
+
         ModelAndView modelAndView = new ModelAndView("jegybeiras/jegy-lista");
-        modelAndView.addObject("jegyek", jegybeirasRepository.findAll());
+        modelAndView.addObject("jegyek", jegybeirasRepository.findByOktato(felhasznalo.getFelhasznaloEntity()));
         return modelAndView;
     }
 

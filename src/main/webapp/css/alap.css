@@ -108,11 +108,11 @@ tbody tr:hover {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 a:visited {
     text-decoration: none;
-    color: inherit;
 }
 
 strong {
@@ -120,6 +120,7 @@ strong {
 }
 
 .panel {
+    margin: 16px;
     position: relative;
     padding: 16px;
     display: flex;
